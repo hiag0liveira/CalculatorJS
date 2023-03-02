@@ -8,6 +8,9 @@ máquina local e abrir index.html em seu navegador da web.
 
 ## ☯ Switch Theme Dark/Ligth
 
+![DARK](https://raw.githubusercontent.com/hiag0liveira/CalculadoraJS/main/docs/img2.PNG "Switch Theme Dark")
+![Ligth](https://raw.githubusercontent.com/hiag0liveira/CalculadoraJS/main/docs/img1.PNG "Switch Theme Ligth")
+
 ## 👨‍🎓 Pré-requisitos
 Para fazer alterações neste site, você precisará de um editor de texto e de um conhecimento básico de HTML, CSS e JavaScript.
 
