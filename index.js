@@ -32,6 +32,7 @@ input.addEventListener("keydown", function (ev) {
 
 document.getElementById("equal").addEventListener("click", calculate)
 
+// ativar a funcao calcular para processar como console
 function calculate() {
   resultInput.value = "ERROR"
   resultInput.classList.add("error")
@@ -40,6 +41,8 @@ function calculate() {
   resultInput.classList.remove("error")
 }
 
+
+//Botão de copiar para area de transferencia 
 document.getElementById("copyToClipboard").addEventListener("click", function (ev) {
   const button = ev.currentTarget
   if (button.innerText === "Copy") {
@@ -52,6 +55,8 @@ document.getElementById("copyToClipboard").addEventListener("click", function (e
   }
 })
 
+
+//Para alterar o tema de dark para ligth 
 document.getElementById("themeSwitcher").addEventListener("click", function () {
   if (main.dataset.theme === "dark") {
     root.style.setProperty("--bg-color", "#f1f5f9")
