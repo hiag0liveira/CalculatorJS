@@ -4,19 +4,18 @@ const input = document.getElementById("input")
 const resultInput = document.getElementById("result")
 const allowedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%", " "]
 
-document.querySelectorAll(".charKey").forEach(function (charKeyBtn) {
-  charKeyBtn.addEventListener("click", function () {
-    const value = charKeyBtn.dataset.value
-    input.value += value
+document.querySelectorAll(".charKey").forEach((charKeyBtn) => {
+  charKeyBtn.addEventListener("click", () => {
+    input.value += charKeyBtn.dataset.value
   })
 })
 
-document.getElementById("clear").addEventListener("click", function () {
+document.getElementById("clear").addEventListener("click", () => {
   input.value = ""
   input.focus()
 })
 
-input.addEventListener("keydown", function (ev) {
+input.addEventListener("keydown",  (ev) => {
   ev.preventDefault()
   if (allowedKeys.includes(ev.key)) {
     input.value += ev.key
@@ -34,16 +33,20 @@ document.getElementById("equal").addEventListener("click", calculate)
 
 // ativar a funcao calcular para processar como console
 function calculate() {
-  resultInput.value = "ERROR"
-  resultInput.classList.add("error")
-  const result = eval(input.value)
-  resultInput.value = result
   resultInput.classList.remove("error")
+
+  try {
+    const result = eval(input.value)
+    resultInput.value = result
+  } catch(e) {
+    resultInput.value = "ERROR"
+    resultInput.classList.add("error")
+  }
 }
 
 
 //Botão de copiar para area de transferencia 
-document.getElementById("copyToClipboard").addEventListener("click", function (ev) {
+document.getElementById("copyToClipboard").addEventListener("click", (ev) => {
   const button = ev.currentTarget
   if (button.innerText === "Copy") {
     button.innerText = "Copied!"
@@ -57,18 +60,30 @@ document.getElementById("copyToClipboard").addEventListener("click", function (e
 
 
 //Para alterar o tema de dark para ligth 
-document.getElementById("themeSwitcher").addEventListener("click", function () {
-  if (main.dataset.theme === "dark") {
-    root.style.setProperty("--bg-color", "#f1f5f9")
-    root.style.setProperty("--border-color", "#aaa")
-    root.style.setProperty("--font-color", "#212529")
-    root.style.setProperty("--primary-color", "#26834a")
-    main.dataset.theme = "light"
-  } else {
-    root.style.setProperty("--bg-color", "#212529")
-    root.style.setProperty("--border-color", "#666")
-    root.style.setProperty("--font-color", "#f1f5f9")
-    root.style.setProperty("--primary-color", "#4dff91")
-    main.dataset.theme = "dark"
+document.getElementById("themeSwitcher").addEventListener("click", () => {
+  const themes = {
+    dark: {
+      bgColor: "#f1f5f9",
+      borderColor: "#aaa",
+      fontColor: "#212529",
+      primaryColor: "#26834a",
+      nextTheme: 'light'
+    },
+    light: {
+      bgColor: "#212529",
+      borderColor: "#666",
+      fontColor: "#f1f5f9",
+      primaryColor: "#4dff91",
+      nextTheme: 'dark'
+    }
   }
+
+  const chosenTheme =  themes[main.dataset.theme]
+
+  root.style.setProperty("--bg-color", chosenTheme.bgColor)
+  root.style.setProperty("--border-color", chosenTheme.borderColor)
+  root.style.setProperty("--font-color", chosenTheme.fontColor)
+  root.style.setProperty("--primary-color", chosenTheme.primaryColor)
+  main.dataset.theme = chosenTheme.nextTheme
+
 })
