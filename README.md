@@ -12,7 +12,7 @@ máquina local e abrir index.html em seu navegador da web.
 ![Ligth](https://raw.githubusercontent.com/hiag0liveira/CalculadoraJS/main/docs/img1.PNG "Switch Theme Ligth")
 
 ## 👨‍🎓 Pré-requisitos
-Para fazer alterações neste site, você precisará de um editor de texto e de um conhecimento básico de HTML, CSS e JavaScript.
+Para fazer alterações neste site, você precisará de um editor de texto e de um conhecimento básico de HTML, CSS e JavaScript.  
 
 ## 🔥 Uso
 A calculadora tem uma interface intuitiva e fácil de usar. Basta clicar nos botões numéricos e de operação para realizar cálculos.
