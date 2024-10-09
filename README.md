@@ -3,13 +3,13 @@
 Este projeto é uma calculadora simples desenvolvida em JavaScript, HTML e CSS. A calculadora tem capacidade de realizar operações matemáticas básicas, como adição, subtração, multiplicação e divisão.  
 
 ## ⏯ Utilizando
-Para visualizar este site, você pode visitar o site ao vivo hospedado em https://hiag0liveira.github.io/CalculadoraJS/ ou clonar este repositório em sua
+Para visualizar este site, você pode visitar o site ao vivo hospedado em https://hiag0liveira.github.io/CalculatorJS/ ou clonar este repositório em sua
 máquina local e abrir index.html em seu navegador da web.
 
 ## ☯ Switch Theme Dark/Ligth
 
-![DARK](https://raw.githubusercontent.com/hiag0liveira/CalculadoraJS/main/docs/img2.PNG "Switch Theme Dark")
-![Ligth](https://raw.githubusercontent.com/hiag0liveira/CalculadoraJS/main/docs/img1.PNG "Switch Theme Ligth")
+![DARK](https://raw.githubusercontent.com/hiag0liveira/CalculatorJS/main/docs/img2.PNG "Switch Theme Dark")
+![Ligth](https://raw.githubusercontent.com/hiag0liveira/CalculatorJS/main/docs/img1.PNG "Switch Theme Ligth")
 
 ## 👨‍🎓 Pré-requisitos
 Para fazer alterações neste site, você precisará de um editor de texto e de um conhecimento básico de HTML, CSS e JavaScript.  
